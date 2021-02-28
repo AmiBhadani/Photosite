@@ -1,0 +1,22 @@
+<body>
+<div>
+  <h1><center>PhotoSite</center></h1>
+  <h3><center>User Photo Page</center></h3>
+</div>
+<div>
+  <center>
+    <h2>Photo of <%= @user.first_name %> <%= @user.last_name %></h2>
+    <% @photos.each do |photo| %>
+      <%#= image_tag("https://photosite-amibhadani.s3.amazonaws.com/#{photo.file_name}") %>
+      <%= image_tag(photo.file_name) %>
+      <p> Photo created at: <%= photo.created_at %> </p>
+      <% @p1 = display_comment(photo.id) %>
+      <% @p1.each do |comment| %>
+        <p><a style="font-size: larger; color: #730E15"> Comment: </a><%= comment.comment_text %> </p>
+        <p><a style="font-size: larger; color: #730E15"> Created at: </a><%= comment.created_at %></p>
+        <p><a style="font-size: larger; color: #730E15"> Posted by: </a><%= link_to display_name(comment.user_id), {:controller => 'photo', :action => 'index', :id => comment.user_id} %></p>
+      <% end %>
+    <% end %>
+  </center>
+</div>
+</body>
