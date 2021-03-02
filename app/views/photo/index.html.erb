@@ -7,8 +7,7 @@
   <center>
     <h2>Photo of <%= @user.first_name %> <%= @user.last_name %></h2>
     <% @photos.each do |photo| %>
-      <%#= image_tag("https://photosite-amibhadani.s3.amazonaws.com/#{photo.file_name}") %>
-      <%= image_tag(photo.file_name) %>
+      <%= image_tag("https://photosite-amibhadani.s3.amazonaws.com/#{photo.file_name}") %>
       <p> Photo created at: <%= photo.created_at %> </p>
       <% @p1 = display_comment(photo.id) %>
       <% @p1.each do |comment| %>
