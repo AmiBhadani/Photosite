@@ -1,6 +1,6 @@
 # Deploy a sample Photosite Application using Ruby on rails to AWS EC2 instance via Docker
 * [Introduction and purpose](https://github.com/AmiBhadani/Photosite/wiki/Introduction-and-purpose) 
-* _link to youtube_
+* [Link to Youtube](https://youtu.be/X7-iEcpjP6U)
 * Demonstration of application working
     * [AWS S3 bucket service to store photo file](https://github.com/AmiBhadani/Photosite/wiki/AWS-S3-bucket-service-to-store-photo-file)
     * [Dockerize photosite application](https://github.com/AmiBhadani/Photosite/wiki/Dockerize-Photosite-application)
